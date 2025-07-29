@@ -142,6 +142,7 @@ This is a standalone PWA designed for accessibility and ease of use. To modify:
 ## License
 
 Open source - feel free to use and modify for educational and assistive purposes.
+Created by Niall Brown (ECVC)
 
 ## Support
 
