@@ -486,259 +486,253 @@
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
 
-    <div class="glass-card p-8 sm:p-10 rounded-3xl shadow-2xl w-full max-w-4xl mx-auto border-2 border-teal-400/20">
+    <div class="w-full max-w-4xl mx-auto">
 
         <header class="mb-8 text-center">
-            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-2 drop-shadow-lg flex items-center justify-center gap-4">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                    <rect x="3" y="4" width="18" height="3" rx="1.5" fill="#94a3b8" />
-                    <rect x="3" y="8.5" width="18" height="3" rx="1.5" fill="#2dd4bf" />
-                    <rect x="3" y="13" width="18" height="3" rx="1.5" fill="#94a3b8" />
-                    <rect x="3" y="17.5" width="18" height="3" rx="1.5" fill="#94a3b8" />
+            <h1 class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-sky-400 tracking-tight mb-2 drop-shadow-lg flex items-center justify-center gap-3">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Selection Scanner
             </h1>
-            <p class="text-teal-300 text-lg font-semibold opacity-90">
+            <p class="text-sky-300 text-lg font-semibold opacity-90">
                 Listen, Learn, and Choose with Confidence
             </p>
         </header>
 
-        <!-- Main Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Left Column: Input & Settings -->
-            <div class="space-y-8">
-                <!-- Word Input Section -->
-                <div class="glass-card p-6 rounded-2xl border border-teal-400/30">
-                    <h2 class="text-2xl font-bold text-teal-300 mb-4 flex items-center gap-2">
-                        ✏️ Add a Word
-                    </h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-4">
-                        <input type="text" id="wordInput" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-xl font-semibold placeholder-slate-400" placeholder="Type a word...">
-                        <button id="addWordBtn" class="bg-gradient-to-r from-teal-500 to-teal-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-xl hover:from-teal-400 hover:to-teal-300 transition-all duration-300 btn-shadow transform hover:-translate-y-1 min-h-[60px]">
-                            Add
-                        </button>
-                    </div>
-                     <div class="mt-4">
-                         <button id="presetSomethingElseBtn" class="flex items-center gap-3 bg-gradient-to-r from-slate-600 to-slate-500 text-slate-200 px-6 py-3 rounded-full text-lg font-bold hover:from-slate-500 hover:to-slate-400 hover:scale-105 transition-all duration-300 btn-shadow">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+        <!-- Main Content Area -->
+        <main class="space-y-8">
+
+            <!-- Word Management Section -->
+            <section class="glass-card p-6 sm:p-8 rounded-2xl border border-teal-400/30">
+                <h2 class="text-2xl font-bold text-teal-300 mb-4 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v11.494m-5.747-8.494l11.494 0" /></svg>
+                    Word List
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-4 mb-4">
+                    <input type="text" id="wordInput" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-xl font-semibold placeholder-slate-400" placeholder="Type a word...">
+                    <button id="addWordBtn" class="bg-gradient-to-r from-teal-500 to-sky-500 text-slate-900 px-6 py-4 rounded-xl font-bold text-xl hover:from-teal-400 hover:to-sky-400 transition-all duration-300 btn-shadow transform hover:-translate-y-1 flex items-center justify-center gap-2 min-h-[60px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                        Add
+                    </button>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-2">
+                        <button id="presetSomethingElseBtn" class="flex items-center gap-3 bg-gradient-to-r from-slate-600 to-slate-500 text-slate-200 px-5 py-2.5 rounded-full text-base font-bold hover:from-slate-500 hover:to-slate-400 hover:scale-105 transition-all duration-300 btn-shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                             Something else
                         </button>
+                        <button id="presetNoneOfTheseBtn" class="flex items-center gap-3 bg-gradient-to-r from-slate-600 to-slate-500 text-slate-200 px-5 py-2.5 rounded-full text-base font-bold hover:from-slate-500 hover:to-slate-400 hover:scale-105 transition-all duration-300 btn-shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                            None of these
+                        </button>
                     </div>
+                    <button id="clearListBtn" class="text-lg text-slate-400 hover:text-red-400 font-bold flex items-center gap-2 px-4 py-2 rounded-full hover:bg-red-500/20 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                        Clear All
+                    </button>
                 </div>
+                <div id="wordList" class="bg-slate-900/50 p-4 rounded-xl min-h-[200px] border border-teal-400/20 flex flex-wrap gap-3 content-start">
+                    <!-- Words will be added here -->
+                </div>
+            </section>
 
-                <!-- Speech Settings Section -->
-                <div class="glass-card p-6 rounded-2xl border border-teal-400/30">
-                     <h2 class="text-2xl font-bold text-teal-300 mb-5 flex items-center gap-2">
-                         ⚙️ Settings
-                     </h2>
-                     <div class="space-y-6">
-                        <div class="space-y-3">
-                            <label for="delayInput" class="font-bold text-slate-300 flex justify-between text-lg">
-                                <span>Wait Time</span> 
-                                <span id="delayValue" class="font-black text-teal-300 text-xl">2.5s</span>
-                            </label>
-                            <input type="range" id="delayInput" value="2.5" min="0.5" max="20" step="0.5" class="w-full">
-                        </div>
-                        <div class="space-y-2">
-                            <label for="loopControl" class="font-bold text-slate-300 text-lg flex items-center gap-2">
-                                Loop Count
-                            </label>
-                            <select id="loopControl" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-lg font-semibold">
-                                <option value="1">1 time</option>
-                                <option value="2">2 times</option>
-                                <option value="3">3 times</option>
-                                <option value="0">Infinite</option>
-                            </select>
-                        </div>
-                         <div class="space-y-2">
-                            <label for="voiceSelect" class="font-bold text-slate-300 text-lg flex items-center gap-2">
-                                Voice
-                            </label>
-                            <select id="voiceSelect" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-lg font-semibold"></select>
-                        </div>
-                        
-                        <!-- Advanced Settings Drawer Toggle -->
-                        <div class="space-y-3 pt-4 border-t border-slate-600">
-                            <button id="settingsDrawerToggle" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-purple-600/30 to-purple-500/30 border border-purple-400/40 rounded-xl hover:from-purple-500/40 hover:to-purple-400/40 transition-all duration-300 group">
-                                <div class="flex items-center gap-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                    <span class="font-bold text-purple-300 text-lg">Advanced Settings</span>
-                                </div>
-                                <svg id="settingsDrawerIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-300 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            <!-- Main Controls Section -->
+            <section class="glass-card p-6 sm:p-8 rounded-2xl border border-teal-400/30">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button id="playBtn" class="w-full bg-gradient-to-r from-green-500 to-green-400 text-white p-5 rounded-2xl font-black text-2xl hover:from-green-400 hover:to-green-300 transition-all duration-300 btn-shadow transform hover:-translate-y-2 disabled:from-slate-600 disabled:to-slate-500 disabled:text-slate-400 disabled:shadow-none disabled:transform-none flex items-center justify-center gap-3 min-h-[70px]">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        Play
+                    </button>
+                    <button id="stopBtn" class="w-full bg-gradient-to-r from-red-500 to-red-400 text-white p-5 rounded-2xl font-black text-2xl hover:from-red-400 hover:to-red-300 transition-all duration-300 btn-shadow transform hover:-translate-y-2 disabled:from-slate-600 disabled:to-slate-500 disabled:text-slate-400 disabled:shadow-none disabled:transform-none flex items-center justify-center gap-3 min-h-[70px]" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" /></svg>
+                        End
+                    </button>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="glass-card p-6 sm:p-8 rounded-2xl border border-purple-400/30">
+                 <h2 class="text-2xl font-bold text-purple-300 mb-5 flex items-center gap-3">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                     Settings
+                 </h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <label for="delayInput" class="font-bold text-slate-300 flex justify-between text-lg">
+                            <span>Wait Time</span> 
+                            <span id="delayValue" class="font-black text-teal-300 text-xl">2.5s</span>
+                        </label>
+                        <input type="range" id="delayInput" value="2.5" min="0.5" max="20" step="0.5" class="w-full">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="loopControl" class="font-bold text-slate-300 text-lg flex items-center gap-2">
+                            Loop Count
+                        </label>
+                        <select id="loopControl" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-lg font-semibold">
+                            <option value="1">1 time</option>
+                            <option value="2">2 times</option>
+                            <option value="3">3 times</option>
+                            <option value="0">Infinite</option>
+                        </select>
+                    </div>
+                     <div class="space-y-2 md:col-span-2">
+                        <label for="voiceSelect" class="font-bold text-slate-300 text-lg flex items-center gap-2">
+                            Voice
+                        </label>
+                        <select id="voiceSelect" class="w-full p-4 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-lg font-semibold"></select>
+                    </div>
+                    
+                    <!-- Advanced Settings Drawer Toggle -->
+                    <div class="md:col-span-2 space-y-3 pt-4 border-t border-slate-600">
+                        <button id="settingsDrawerToggle" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-purple-600/30 to-purple-500/30 border border-purple-400/40 rounded-xl hover:from-purple-500/40 hover:to-purple-400/40 transition-all duration-300 group">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 16v-2m8-6h2M4 12H2m15.364 6.364l1.414 1.414M5.222 5.222l1.414 1.414M18.364 5.222l1.414-1.414M5.222 18.364l1.414-1.414" />
                                 </svg>
-                            </button>
-                            
-                            <!-- Settings Drawer Content -->
-                            <div id="settingsDrawer" class="hidden space-y-4 p-4 bg-slate-800/50 border border-purple-400/20 rounded-xl backdrop-blur-sm">
-                                <h3 class="font-bold text-slate-300 text-lg flex items-center gap-2 border-b border-slate-600 pb-2">
-                                    🎮 Scanning & Activation Settings
-                                </h3>
-                                <p class="text-sm text-slate-400 pb-3">
-                                    📱 <strong>Touch controls work everywhere:</strong> Tap to select, swipe down to advance - these are always available regardless of your keyboard/mouse settings below.
-                                </p>
-                                
-                                <!-- Two-Step Scanning Option -->
-                                <div class="space-y-2 pb-3 border-b border-slate-700">
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox" id="twoStepScanning" class="w-5 h-5 text-teal-400 bg-slate-800 border-2 border-slate-600 rounded focus:ring-teal-400 focus:ring-2">
-                                        <span class="font-bold text-slate-300 text-base">
-                                            Two-Step Scanning
-                                        </span>
-                                    </label>
-                                    <p class="text-slate-500 text-sm ml-8">
-                                        Manual advance - you control when to move to the next word
-                                    </p>
-                                </div>
-                                
-                                <!-- Single-Step Controls (Default) -->
-                                <div id="singleStepControls" class="space-y-4">
-                                    <div class="space-y-2">
-                                        <label for="customActivationSelect" class="font-bold text-slate-400 text-base">
-                                            Activation Method
-                                        </label>
-                                        <select id="customActivationSelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
-                                            <option value="Space">Space Bar</option>
-                                            <option value="Enter">Enter Key</option>
-                                            <option value="Tab">Tab Key</option>
-                                            <option value="NumpadEnter">Numpad Enter</option>
-                                            <option value="ArrowUp">Arrow Up</option>
-                                            <option value="ArrowDown">Arrow Down</option>
-                                            <option value="ArrowLeft">Arrow Left</option>
-                                            <option value="ArrowRight">Arrow Right</option>
-                                            <option value="click">Left Click/Touch</option>
-                                            <option value="contextmenu">Right Click</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                
-                                <!-- Two-Step Controls (Hidden by default) -->
-                                <div id="twoStepControls" class="space-y-4 hidden">
-                                    <div class="space-y-2">
-                                        <label for="advanceKeySelect" class="font-bold text-amber-400 text-base">
-                                            🔄 Advance Key
-                                        </label>
-                                        <select id="advanceKeySelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
-                                            <option value="Space">Space Bar</option>
-                                            <option value="Enter">Enter Key</option>
-                                            <option value="Tab">Tab Key</option>
-                                            <option value="NumpadEnter">Numpad Enter</option>
-                                            <option value="ArrowUp">Arrow Up</option>
-                                            <option value="ArrowDown">Arrow Down</option>
-                                            <option value="ArrowLeft">Arrow Left</option>
-                                            <option value="ArrowRight">Arrow Right</option>
-                                            <option value="click">Left Click/Touch</option>
-                                            <option value="contextmenu">Right Click</option>
-                                        </select>
-                                    </div>
-                                    <div class="space-y-2">
-                                        <label for="selectKeySelect" class="font-bold text-green-400 text-base">
-                                            ✅ Select Key
-                                        </label>
-                                        <select id="selectKeySelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
-                                            <option value="Enter" selected>Enter Key</option>
-                                            <option value="Space">Space Bar</option>
-                                            <option value="Tab">Tab Key</option>
-                                            <option value="NumpadEnter">Numpad Enter</option>
-                                            <option value="ArrowUp">Arrow Up</option>
-                                            <option value="ArrowDown">Arrow Down</option>
-                                            <option value="ArrowLeft">Arrow Left</option>
-                                            <option value="ArrowRight">Arrow Right</option>
-                                            <option value="click">Left Click/Touch</option>
-                                            <option value="contextmenu">Right Click</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                <span class="font-bold text-purple-300 text-lg">Advanced Controls</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Word List & Controls -->
-            <div class="space-y-8">
-                 <!-- Word List Display -->
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl font-bold text-teal-300 flex items-center gap-2">
-                            📝 Word List
-                        </h2>
-                        <button id="clearListBtn" class="text-lg text-slate-400 hover:text-red-400 font-bold flex items-center gap-2 px-4 py-2 rounded-full hover:bg-red-500/20 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
-                            Clear All
+                            <svg id="settingsDrawerIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-300 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </button>
-                    </div>
-                    <div id="wordList" class="glass-card p-6 rounded-2xl min-h-[300px] border border-teal-400/30 flex flex-wrap gap-4 content-start">
-                        <!-- Words will be added here -->
-                    </div>
-                </div>
-
-                 <!-- Controls Section -->
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <button id="playBtn" class="w-full bg-gradient-to-r from-green-500 to-green-400 text-white p-5 rounded-2xl font-black text-2xl hover:from-green-400 hover:to-green-300 transition-all duration-300 btn-shadow transform hover:-translate-y-2 disabled:from-slate-600 disabled:to-slate-500 disabled:text-slate-400 disabled:shadow-none disabled:transform-none flex items-center justify-center gap-3 min-h-[70px]">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
-                            Play
-                        </button>
-                        <button id="stopBtn" class="w-full bg-gradient-to-r from-red-500 to-red-400 text-white p-5 rounded-2xl font-black text-2xl hover:from-red-400 hover:to-red-300 transition-all duration-300 btn-shadow transform hover:-translate-y-2 disabled:from-slate-600 disabled:to-slate-500 disabled:text-slate-400 disabled:shadow-none disabled:transform-none flex items-center justify-center gap-3 min-h-[70px]" disabled>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" /></svg>
-                            End
-                        </button>
-                    </div>
-                     <!-- Instructions Section -->
-                    <div class="glass-card p-6 rounded-2xl border-2 border-fuchsia-400/50 text-center bg-gradient-to-br from-fuchsia-900/30 to-purple-900/30">
-                        <h2 class="text-2xl font-black text-fuchsia-300 mb-4 flex items-center justify-center gap-2">
-                            🎯 How to Select
-                        </h2>
                         
-                        <!-- Always Available Touch Controls -->
-                        <div class="mb-4 p-3 bg-green-500/20 rounded-xl border border-green-400/40">
-                            <h3 class="text-green-300 font-bold text-lg mb-2">📱 Always Available (Touch)</h3>
-                            <div class="space-y-2 text-green-200">
-                                <p class="text-base font-semibold">
-                                    <span class="text-green-300">●</span> Tap screen to select word
-                                </p>
-                                <p class="text-base font-semibold">
-                                    <span class="text-green-300">●</span> Swipe down to advance to next word
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Customizable Computer Controls -->
-                        <div class="p-3 bg-blue-500/20 rounded-xl border border-blue-400/40">
-                            <h3 class="text-blue-300 font-bold text-lg mb-2">🖥️ Your Chosen Keys</h3>
-                            <div class="space-y-2 text-blue-200" id="customControlsDisplay">
-                                <p class="text-base font-semibold">
-                                    <span class="text-blue-300">●</span> Your selected activation method
-                                </p>
-                                <p class="text-base font-semibold">
-                                    <span class="text-blue-300">●</span> Press Escape to exit scanning
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4 p-3 bg-amber-500/20 rounded-xl border border-amber-400/30">
-                            <p class="text-amber-200 text-sm font-medium" id="helpText">
-                                💡 Touch controls work everywhere! Customize your keyboard/mouse in settings.
+                        <!-- Settings Drawer Content -->
+                        <div id="settingsDrawer" class="hidden space-y-4 p-4 bg-slate-800/50 border border-purple-400/20 rounded-xl backdrop-blur-sm">
+                            <h3 class="font-bold text-slate-300 text-lg flex items-center gap-2 border-b border-slate-600 pb-2">
+                                🎮 Scanning & Activation Settings
+                            </h3>
+                            <p class="text-sm text-slate-400 pb-3">
+                                📱 <strong>Touch controls work everywhere:</strong> Tap to select, swipe down to advance - these are always available regardless of your keyboard/mouse settings below.
                             </p>
+                            
+                            <!-- Two-Step Scanning Option -->
+                            <div class="space-y-2 pb-3 border-b border-slate-700">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" id="twoStepScanning" class="w-5 h-5 text-teal-400 bg-slate-800 border-2 border-slate-600 rounded focus:ring-teal-400 focus:ring-2">
+                                    <span class="font-bold text-slate-300 text-base">
+                                        Two-Step Scanning
+                                    </span>
+                                </label>
+                                <p class="text-slate-500 text-sm ml-8">
+                                    Manual advance - you control when to move to the next word
+                                </p>
+                            </div>
+                            
+                            <!-- Single-Step Controls (Default) -->
+                            <div id="singleStepControls" class="space-y-4">
+                                <div class="space-y-2">
+                                    <label for="customActivationSelect" class="font-bold text-slate-400 text-base">
+                                        Activation Method
+                                    </label>
+                                    <select id="customActivationSelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
+                                        <option value="Space">Space Bar</option>
+                                        <option value="Enter">Enter Key</option>
+                                        <option value="Tab">Tab Key</option>
+                                        <option value="NumpadEnter">Numpad Enter</option>
+                                        <option value="ArrowUp">Arrow Up</option>
+                                        <option value="ArrowDown">Arrow Down</option>
+                                        <option value="ArrowLeft">Arrow Left</option>
+                                        <option value="ArrowRight">Arrow Right</option>
+                                        <option value="click">Left Click/Touch</option>
+                                        <option value="contextmenu">Right Click</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Two-Step Controls (Hidden by default) -->
+                            <div id="twoStepControls" class="space-y-4 hidden">
+                                <div class="space-y-2">
+                                    <label for="advanceKeySelect" class="font-bold text-amber-400 text-base">
+                                        🔄 Advance Key
+                                    </label>
+                                    <select id="advanceKeySelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
+                                        <option value="Space">Space Bar</option>
+                                        <option value="Enter">Enter Key</option>
+                                        <option value="Tab">Tab Key</option>
+                                        <option value="NumpadEnter">Numpad Enter</option>
+                                        <option value="ArrowUp">Arrow Up</option>
+                                        <option value="ArrowDown">Arrow Down</option>
+                                        <option value="ArrowLeft">Arrow Left</option>
+                                        <option value="ArrowRight">Arrow Right</option>
+                                        <option value="click">Left Click/Touch</option>
+                                        <option value="contextmenu">Right Click</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="selectKeySelect" class="font-bold text-green-400 text-base">
+                                        ✅ Select Key
+                                    </label>
+                                    <select id="selectKeySelect" class="w-full p-3 bg-slate-800/80 border-2 border-slate-600 text-white rounded-xl focus:ring-4 focus:ring-teal-400/50 focus:outline-none focus:border-teal-400 text-base font-semibold">
+                                        <option value="Enter" selected>Enter Key</option>
+                                        <option value="Space">Space Bar</option>
+                                        <option value="Tab">Tab Key</option>
+                                        <option value="NumpadEnter">Numpad Enter</option>
+                                        <option value="ArrowUp">Arrow Up</option>
+                                        <option value="ArrowDown">Arrow Down</option>
+                                        <option value="ArrowLeft">Arrow Left</option>
+                                        <option value="ArrowRight">Arrow Right</option>
+                                        <option value="click">Left Click/Touch</option>
+                                        <option value="contextmenu">Right Click</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <!-- Instructions Section -->
+            <section class="glass-card p-6 rounded-2xl border-2 border-fuchsia-400/50 text-center bg-gradient-to-br from-fuchsia-900/30 to-purple-900/30">
+                <h2 class="text-2xl font-black text-fuchsia-300 mb-4 flex items-center justify-center gap-2">
+                    🎯 How to Select
+                </h2>
+                
+                <!-- Always Available Touch Controls -->
+                <div class="mb-4 p-3 bg-green-500/20 rounded-xl border border-green-400/40">
+                    <h3 class="text-green-300 font-bold text-lg mb-2">📱 Always Available (Touch)</h3>
+                    <div class="space-y-2 text-green-200">
+                        <p class="text-base font-semibold">
+                            <span class="text-green-300">●</span> Tap screen to select word
+                        </p>
+                        <p class="text-base font-semibold">
+                            <span class="text-green-300">●</span> Swipe down to advance to next word
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Customizable Computer Controls -->
+                <div class="p-3 bg-blue-500/20 rounded-xl border border-blue-400/40">
+                    <h3 class="text-blue-300 font-bold text-lg mb-2">🖥️ Your Chosen Keys</h3>
+                    <div class="space-y-2 text-blue-200" id="customControlsDisplay">
+                        <p class="text-base font-semibold">
+                            <span class="text-blue-300">●</span> Your selected activation method
+                        </p>
+                        <p class="text-base font-semibold">
+                            <span class="text-blue-300">●</span> Press Escape to exit scanning
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-amber-500/20 rounded-xl border border-amber-400/30">
+                    <p class="text-amber-200 text-sm font-medium" id="helpText">
+                        💡 Touch controls work everywhere! Customize your keyboard/mouse in settings.
+                    </p>
+                </div>
+            </section>
+        </main>
         
         <!-- Status Bar -->
-        <div id="statusBar" class="mt-8 text-center text-slate-300 font-bold text-lg status-bar p-4 rounded-xl">
-            Ready to start your word adventure!
-        </div>
-        
-        <!-- Save Status Indicator -->
-        <div id="saveStatus" class="mt-2 text-center text-slate-500 text-sm opacity-0 transition-opacity duration-300">
-            💾 Data saved
-        </div>
+        <footer class="mt-8 space-y-2 text-center">
+            <div id="statusBar" class="text-slate-300 font-bold text-lg status-bar p-4 rounded-xl">
+                Ready to start your word adventure!
+            </div>
+            
+            <!-- Save Status Indicator -->
+            <div id="saveStatus" class="text-slate-500 text-sm opacity-0 transition-opacity duration-300 h-5">
+                💾 Data saved
+            </div>
+        </footer>
 
     </div>
 
@@ -985,6 +979,7 @@
             const wordInput = document.getElementById('wordInput');
             const addWordBtn = document.getElementById('addWordBtn');
             const presetSomethingElseBtn = document.getElementById('presetSomethingElseBtn');
+            const presetNoneOfTheseBtn = document.getElementById('presetNoneOfTheseBtn');
             const wordListDiv = document.getElementById('wordList');
             const clearListBtn = document.getElementById('clearListBtn');
             const delayInput = document.getElementById('delayInput');
@@ -1014,6 +1009,9 @@
             // Touch gesture tracking
             let touchStartY = null;
             let touchStartTime = null;
+            // Pointer event tracking for unified input
+            let pointerStartY = null;
+            let pointerStartTime = null;
 
             // Storage key for saving app data
             const STORAGE_KEY = 'selectionScannerData';
@@ -1370,7 +1368,6 @@
                         <div class="text-center py-12">
                             <div class="text-6xl mb-4 animate-bounce">📝</div>
                             <p class="text-slate-400 text-xl font-semibold">Add words to get started!</p>
-                            <p class="text-slate-500 text-lg mt-2">Your word adventure awaits...</p>
                         </div>
                     `;
                     placeholder.className = 'w-full flex items-center justify-center';
@@ -1487,18 +1484,21 @@
                     // Add "Something else"
                     words.push('Something else');
                     updateStatus('Added "Something else" - Perfect for open choices!');
-                    presetSomethingElseBtn.textContent = 'Remove Something else';
+                    presetSomethingElseBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" /></svg>
+                        Remove "Something else"
+                    `;
                     presetSomethingElseBtn.classList.remove('from-slate-600', 'to-slate-500', 'hover:from-slate-500', 'hover:to-slate-400');
-                    presetSomethingElseBtn.classList.add('from-red-600', 'to-red-500', 'hover:from-red-500', 'hover:to-red-400');
+                    presetSomethingElseBtn.classList.add('bg-slate-700', 'text-red-400', 'hover:bg-slate-600', 'hover:text-red-300');
                 } else {
                     // Remove "Something else"
                     words.splice(somethingElseIndex, 1);
                     updateStatus('Removed "Something else"');
                     presetSomethingElseBtn.innerHTML = `
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                         Something else
                     `;
-                    presetSomethingElseBtn.classList.remove('from-red-600', 'to-red-500', 'hover:from-red-500', 'hover:to-red-400');
+                    presetSomethingElseBtn.classList.remove('bg-slate-700', 'text-red-400', 'hover:bg-slate-600', 'hover:text-red-300');
                     presetSomethingElseBtn.classList.add('from-slate-600', 'to-slate-500', 'hover:from-slate-500', 'hover:to-slate-400');
                     // Adjust current word index if necessary
                     if (currentWordIndex > somethingElseIndex) {
@@ -1517,49 +1517,87 @@
                 }, 600);
             });
 
-            function speak(text, onEndCallback) {
-                if ('speechSynthesis' in window && text && text.trim() !== '') {
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    const selectedVoice = synthVoices.find(voice => voice.name === voiceSelect.value);
-                    if (selectedVoice) utterance.voice = selectedVoice;
-                    
-                    // Enhanced speech settings for children
-                    utterance.rate = 0.8; // Slightly slower for better comprehension
-                    utterance.pitch = 1.1; // Slightly higher pitch for children
-                    utterance.volume = 0.9;
-                    
-                    utterance.onend = () => {
-                        if (isPlaying) {
-                            // In two-step scanning, don't automatically advance
-                            if (twoStepScanning.checked) {
-                                // Just wait for user input, no timeout
-                                updateStatus(`Word spoken. Use your activation method to advance or select.`);
-                                return;
-                            } else {
-                                // Normal timed scanning
-                                const delay = parseFloat(delayInput.value) * 1000;
-                                // Play a subtle tick sound to indicate waiting period
-                                playTick();
-                                timeoutId = setTimeout(() => {
-                                    if (onEndCallback) onEndCallback();
-                                }, delay);
-                            }
-                        } else {
-                             if (onEndCallback) onEndCallback();
-                        }
-                    };
-
-                    utterance.onerror = (event) => {
-                        if (event.error !== 'interrupted') {
-                            console.error('SpeechSynthesisUtterance.onerror:', event.error);
-                            updateStatus(`Speech error: ${event.error}`);
-                        }
-                        clearTimeout(timeoutId);
-                        if (onEndCallback) onEndCallback();
-                    };
-                    
-                    window.speechSynthesis.speak(utterance);
+            presetNoneOfTheseBtn.addEventListener('click', () => {
+                const noneOfTheseIndex = words.indexOf('None of these');
+                if (noneOfTheseIndex === -1) {
+                    // Add "None of these"
+                    words.push('None of these');
+                    updateStatus('Added "None of these"');
+                    presetNoneOfTheseBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" /></svg>
+                        Remove "None of these"
+                    `;
+                    presetNoneOfTheseBtn.classList.remove('from-slate-600', 'to-slate-500', 'hover:from-slate-500', 'hover:to-slate-400');
+                    presetNoneOfTheseBtn.classList.add('bg-slate-700', 'text-red-400', 'hover:bg-slate-600', 'hover:text-red-300');
                 } else {
+                    // Remove "None of these"
+                    words.splice(noneOfTheseIndex, 1);
+                    updateStatus('Removed "None of these"');
+                    presetNoneOfTheseBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                        None of these
+                    `;
+                    presetNoneOfTheseBtn.classList.remove('bg-slate-700', 'text-red-400', 'hover:bg-slate-600', 'hover:text-red-300');
+                    presetNoneOfTheseBtn.classList.add('from-slate-600', 'to-slate-500', 'hover:from-slate-500', 'hover:to-slate-400');
+                    // Adjust current word index if necessary
+                    if (currentWordIndex > noneOfTheseIndex) {
+                        currentWordIndex--;
+                    } else if (currentWordIndex === noneOfTheseIndex) {
+                        currentWordIndex = -1;
+                    }
+                }
+                renderWords();
+                saveAppState(); // Save after toggling "None of these"
+                
+                // Add visual feedback
+                presetNoneOfTheseBtn.classList.add('animate-press');
+                setTimeout(() => {
+                    presetNoneOfTheseBtn.classList.remove('animate-press');
+                }, 600);
+            });
+
+            function speak(text, onEndCallback) {
+                // Robust feature detection for speech synthesis
+                if (window.speechSynthesis && typeof window.SpeechSynthesisUtterance !== 'undefined' && text && text.trim() !== '') {
+                    try {
+                        const utterance = new window.SpeechSynthesisUtterance(text);
+                        const selectedVoice = synthVoices.find(voice => voice.name === voiceSelect.value);
+                        if (selectedVoice) utterance.voice = selectedVoice;
+                        utterance.rate = 0.8;
+                        utterance.pitch = 1.1;
+                        utterance.volume = 0.9;
+                        utterance.onend = function() {
+                            if (isPlaying) {
+                                if (twoStepScanning.checked) {
+                                    updateStatus(`Word spoken. Use your activation method to advance or select.`);
+                                    return;
+                                } else {
+                                    const delay = parseFloat(delayInput.value) * 1000;
+                                    playTick();
+                                    timeoutId = setTimeout(() => {
+                                        if (onEndCallback) onEndCallback();
+                                    }, delay);
+                                }
+                            } else {
+                                if (onEndCallback) onEndCallback();
+                            }
+                        };
+                        utterance.onerror = function(event) {
+                            if (event.error !== 'interrupted') {
+                                console.error('SpeechSynthesisUtterance.onerror:', event.error);
+                                updateStatus(`Speech error: ${event.error}`);
+                            }
+                            clearTimeout(timeoutId);
+                            if (onEndCallback) onEndCallback();
+                        };
+                        window.speechSynthesis.speak(utterance);
+                    } catch (err) {
+                        console.warn('Speech synthesis failed:', err);
+                        if (onEndCallback) onEndCallback();
+                    }
+                } else {
+                    // Fallback: show text visually or play a beep
+                    playTick();
                     if (onEndCallback) onEndCallback();
                 }
             }
@@ -1649,9 +1687,17 @@
             stopBtn.addEventListener('click', () => stopPlayback({message: "Session ended by user."}));
 
             function getAudioContext() {
+                // Robust feature detection for audio context
                 if (!audioContext || audioContext.state === 'closed') {
                     try {
-                        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                        if (window.AudioContext) {
+                            audioContext = new window.AudioContext();
+                        } else if (window.webkitAudioContext) {
+                            audioContext = new window.webkitAudioContext();
+                        } else {
+                            console.error("Web Audio API not supported.");
+                            return null;
+                        }
                     } catch (e) { console.error("Web Audio API not supported."); return null; }
                 }
                 return audioContext;
@@ -2017,10 +2063,49 @@
                 }
             });
             
-            // Handle mouse clicks and touch events for selection and word management
+            // Use pointer events for unified input
+            // Pointer down
+            document.addEventListener('pointerdown', (e) => {
+                if (isPlaying && currentWordIndex >= 0) {
+                    if (!e.target.closest('button') || e.target.closest('.word-item button')) {
+                        pointerStartY = e.clientY;
+                        pointerStartTime = Date.now();
+                    }
+                }
+            });
+            // Pointer up
+            document.addEventListener('pointerup', (e) => {
+                if (isPlaying && currentWordIndex >= 0 && pointerStartY !== null) {
+                    if (!e.target.closest('button') || e.target.closest('.word-item button')) {
+                        const pointerEndY = e.clientY;
+                        const pointerDuration = Date.now() - pointerStartTime;
+                        const swipeDistance = pointerEndY - pointerStartY;
+                        const minSwipeDistance = 50;
+                        const maxSwipeTime = 500;
+                        if (swipeDistance > minSwipeDistance && pointerDuration < maxSwipeTime) {
+                            e.preventDefault();
+                            if (twoStepScanning.checked) {
+                                handleAdvance();
+                            } else {
+                                clearTimeout(timeoutId);
+                                playNextWord();
+                            }
+                        } else if (Math.abs(swipeDistance) < minSwipeDistance && pointerDuration < maxSwipeTime) {
+                            e.preventDefault();
+                            if (twoStepScanning.checked) {
+                                handleSelect();
+                            } else {
+                                handleActivation();
+                            }
+                        }
+                    }
+                }
+                pointerStartY = null;
+                pointerStartTime = null;
+            });
+            // Fallback for click/touch for older browsers
             document.addEventListener('click', (e) => {
                 if (isPlaying && currentWordIndex >= 0) {
-                    // Don't trigger if clicking on control buttons or remove buttons
                     if (!e.target.closest('button') || e.target.closest('.word-item button')) {
                         const action = getActivationMethod('click', 'mouse');
                         if (action) {
@@ -2036,8 +2121,6 @@
                         }
                     }
                 }
-                
-                // Allow clicking on word items to select them when not playing
                 if (!isPlaying && e.target.closest('.word-item')) {
                     const wordItem = e.target.closest('.word-item');
                     const index = parseInt(wordItem.dataset.index);
